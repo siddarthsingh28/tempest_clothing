@@ -1,5 +1,5 @@
-import SignUpForm from "./SignUp";
-import SignInForm from "./SignInform";
+import SignUpForm from "../Components/SignUp";
+import SignInForm from "../Components/SignInform";
 
 import { AuthenticationContainer } from "./AuthenticationStyle";
 
