@@ -16,6 +16,17 @@ const App = () => {
   useEffect(() => {
     dispatch(checkUserSession());
   }, []);
+=======
+    const unsubscribe = onAuthStateChangedListener(user => {
+      if (user) {
+        createUserDocumentFromAuth(user);
+      }
+      dispatch(setCurrentUser(user));
+    });
+
+    return unsubscribe;
+  }, [dispatch]);
+>>>>>>> ed313dd86a2ac52e08920611d12af04d1068f2a3
 
   return (
     <Routes>
